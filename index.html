@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ APP</title>
+    <link rel="icon" href="//d8p1x3h4xd5gq.cloudfront.net/5d6b99d329a6ab50ccbc0bf6/public/5ea743d19bf15e2d300cc224.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.14/base.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+
+<body class="bg-gradient-to-br from-blue-800 via-blue-700 to-blue-900 h-screen flex items-center justify-center text-white">
+    <div id="startDiv" class="bg-white text-gray-900 rounded-xl shadow-lg max-w-sm w-full lg:max-w-lg p-6">
+        <h1 class="text-xl font-extrabold mb-4 text-center text-blue-900">ENTER YOUR DETAILS</h1>
+        <div class="flex flex-col gap-4">
+            <input 
+                type="text" 
+                id="nameInput" 
+                placeholder="Enter your name" 
+                class="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            />
+            <input 
+                type="email" 
+                id="emailInput" 
+                placeholder="Enter your email" 
+                class="border border-gray-300 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            />
+        </div>
+        <button 
+            onclick="QuizLogin()" 
+            class="bg-blue-700 text-white font-semibold rounded-lg px-4 py-2 mt-4 hover:bg-blue-600 transition duration-300 w-full">
+            START QUIZ
+        </button>
+    </div>
+  
+    <div id="quesDiv" class=" bg-white text-gray-900 rounded-xl shadow-xl max-w-sm w-full lg:max-w-lg p-6 relative">
+        <p id="time" class="absolute right-6 top-12 lg:top-6 text-blue-700 font-bold text-sm"></p>
+        <h1 class="text-xl font-extrabold mb-4 text-center text-blue-900">QUIZ APP</h1>
+        <h2 id="questionId" class="text-lg font-medium mb-6 text-center">Question</h2>
+
+      
+        <div id="ansBtns" class="flex flex-col gap-4 items-center">
+            
+        </div>
+
+       
+        <div class="flex justify-center mt-6">
+            <button 
+                id="nextbtn" 
+                class="p-3 px-6 bg-blue-700 text-white rounded-lg shadow-md font-semibold hover:bg-blue-600 transition duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed"
+                onclick="Next()">
+                NEXT
+            </button>
+        </div>
+    </div>
+
+   
+    <div id="scoreContain" class="hidden bg-white text-gray-900 rounded-xl shadow-lg max-w-sm w-full lg:max-w-lg p-6 flex flex-col items-center">
+        <h2 class="text-xl font-extrabold mb-4 text-center text-blue-900">QUIZ COMPLETED</h2>
+        <p id="score" class="text-lg font-medium text-gray-700 mb-6"></p>
+        <button 
+            id="Rebtn" 
+            class="p-3 px-6 bg-blue-700 text-white rounded-lg shadow-md font-semibold hover:bg-blue-600 transition duration-300"
+            onclick="Restart()">
+            RESTART
+        </button>
+        <button 
+        id="viewAnswersBtn" 
+        class="p-3 px-6 mt-2 bg-gray-700 text-white rounded-lg shadow-md font-semibold hover:bg-gray-600 transition duration-300"
+        onclick="viewCorrectAnswers()">
+        VIEW CORRECT ANSWERS
+    </button>
+    <p id="crtAns" class="mt-1"></p>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
