@@ -174,7 +174,7 @@ function ShowQn(){
   if (timerInterval) clearInterval(timerInterval); 
   let timeId=document.getElementById("time");
   let duration=15000;
-  let remainingTime=duration/1000;
+  let remainingTime=(duration/1000)+1;
   let currQn=questions[currQnIndex];
   let QnNo=currQnIndex + 1;
   questionNo.innerHTML=QnNo + "." + currQn.question;
