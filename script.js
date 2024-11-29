@@ -112,6 +112,7 @@ let remainingTime;
 window.onload=function(){
   document.getElementById("startDiv").style.display = "block";
   document.getElementById("quesDiv").style.display = "none"; 
+  document.getElementById("scoreContain").style.display="none";
 }
 
 function QuizLogin() {
@@ -123,7 +124,8 @@ function QuizLogin() {
       return;
   }
 
-  
+ 
+  document.getElementById("scoreContain").style.display="none";
   document.getElementById("startDiv").style.display = "none";
   document.getElementById("quesDiv").style.display = "block";
 
@@ -227,7 +229,7 @@ function Next(){
   else{
     qn.style.display="none";
     scoreContain.style.display="flex";
-    scores.innerHTML=`<p>YOUR SCORE:${score}</p>`
+    scores.innerHTML=`<p>YOUR SCORE: ${score}</p>`
   
   }
   
@@ -243,6 +245,6 @@ function Restart(){
 
 
 
-StartQuiz()
+
 
 
