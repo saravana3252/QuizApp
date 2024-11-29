@@ -164,11 +164,6 @@ function StartQuiz(){
    ShowQn()
 }
 
-// let time=setTimeout(ShowQn,20000)
-
-// if(time<20000){
-//   Next();
-// }
 
 function ShowQn(){
   if (timerInterval) clearInterval(timerInterval); 
