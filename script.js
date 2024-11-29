@@ -206,7 +206,7 @@ function CheckAns(button){
   else{
     button.classList.add("bg-red-500", "text-white");
   }
-  clearInterval(timerInterval);
+ 
   nxtBtn.disabled = false;
 }
 
