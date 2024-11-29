@@ -229,7 +229,7 @@ function Next(){
   let qn=document.getElementById("quesDiv");
   let scores=document.getElementById("score");
   let scoreContain=document.getElementById("scoreContain");
- 
+  const nameInput = document.getElementById("nameInput").value;
   
   currQnIndex++;
   if(currQnIndex < questions.length){
@@ -238,7 +238,7 @@ function Next(){
   else{
     qn.style.display="none";
     scoreContain.style.display="flex";
-    scores.innerHTML=`<p>YOUR SCORE: ${score}</p>`
+    scores.innerHTML=`<p>${nameInput},Your Score: ${score}</p>`
   
   }
   
