@@ -119,9 +119,16 @@ function QuizLogin() {
   const nameInput = document.getElementById("nameInput").value;
   const emailInput = document.getElementById("emailInput").value;
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (!nameInput || !emailInput) {
       alert("Please fill in both your name and email to start the quiz.");
       return;
+  }
+
+  if (!emailRegex.test(emailInput)) {
+    alert("Please enter a valid email address.");
+    return;
   }
 
  
