@@ -160,7 +160,6 @@ function StartQuiz(){
    score=0;
    scoreContain.style.display="none";
    qn.style.display="block";
-   nxtBtn.innerHTML="NEXT";
    ShowQn()
 }
 
