@@ -212,7 +212,7 @@ function CheckAns(button){
 function viewCorrectAnswers() {
   let correctAnswers = questions.map((question, index) => {
       let correctAnswer = question.answers.find(answer => answer.correct === true );
-      return `Q${question.question}: ${correctAnswer.text}`;
+      return `Q${index+1}.${question.question} <br><h6 class="font-bold">Correct Answer: <span class="font-medium">${correctAnswer.text}</span></h6>`;
   });
 
  document.getElementById("crtAns").innerHTML=correctAnswers.join('<br>');
